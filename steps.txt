@@ -1,0 +1,15 @@
+Set up your project folder: Create a folder for your project and set up your HTML, CSS, and JS files.
+
+Set up the HTML structure: Use Bootstrap 4 to create a basic HTML structure for your chatroom. You can create a header, main section, and footer. The main section should contain a chat box and input field.
+
+Style your chatroom: Use Bootstrap 4 classes to style your chatroom. You can set the background color, font size, and spacing.
+
+Connect to Firebase: Firebase is a backend platform that you can use to store and retrieve data for your chatroom. Set up a Firebase project and connect your web app to Firebase using the Firebase SDK.
+
+Create a database: Create a Firebase Realtime Database to store your chat messages.
+
+Create a form submit event: Use JavaScript to create a form submit event that sends a message to your Firebase database. You can also use JavaScript to retrieve messages from the database and display them in the chat box.
+
+Test your chatroom: Test your chatroom by sending messages and verifying that they are stored in the Firebase database and displayed in the chat box.
+
+With these steps, you can create a simple chatroom web app using Vanilla Javascript and Bootstrap 4. Keep in mind that this is a basic implementation, and there are many ways to improve and customize your chatroom, such as adding user authentication or using other backend platforms like Node.js or PHP.
