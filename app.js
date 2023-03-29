@@ -1,9 +1,21 @@
+import { Chatroom } from "chatroom.js";
 
 
+const cl = new Chatroom; 
 
+// Get UI varaibles 
 
+// Intialise event listeners 
 
+// EL Search
+// Take in Parameters 
+// Make GET API call with Parameters 
+// Response get data
+// Display Data 
 
-let tom = 'Tom'; 
+// EL Main navigation 
+// Call UI controller
 
-console.log(tom);
+// EL Navbar navigation 
+// Call UI controller
+
