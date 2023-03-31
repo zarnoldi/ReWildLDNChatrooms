@@ -37,21 +37,26 @@
         </header>
         <main class=" row">
                     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-                        <ul class="nav nav-pills flex-column mb-auto">
+                        <ul class="nav nav-pills flex-column mb-auto" id="mainNav">
                           <li class="nav-item">
-                            <a href="#" class="nav-link active" aria-current="page">
+                            <a href="#" class="nav-link text-white active" id="myRoomsBtn" aria-current="page">
                               My Rooms
                             </a>
                           </li>
                           <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="#" class="nav-link text-white" id="searchRoomsBtn">
                               Search Rooms
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="nav-link text-white" id="aboutBtn">
+                              About
                             </a>
                           </li>
                         </ul>
                       </div>
-                <div class="col bg-whte border border-danger">
-                    <section id="myRooms" class="d-none">
+                <div class="col bg-dark">
+                    <section id="myRooms" class="">
                         <div class="container">
                             <h2 class="text-white">My Rooms</h2>
                             <table class="table text-white">
@@ -78,7 +83,7 @@
                             </table>
                         </div>
                     </section>
-                    <section id="about" class="d-none">
+                    <section id="about" class="">
                         <div class="container text-white">
                             <h2>About the Rewild London</h2>
                             <p>
@@ -94,7 +99,7 @@
                             </p>
                         </div>
                     </section>
-                    <section id="searchRooms">
+                    <section id="searchRooms" class="">
                         <div class="container">
                             <div class="row mt-4">
                                 <div class="col-md-auto">

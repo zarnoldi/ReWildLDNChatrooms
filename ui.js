@@ -7,48 +7,64 @@
 // Sets all other main section UIs to inactive
 // 
 
-const UICtrl = (function () {
+export const UICtrl = (function () {
 
-    let text = 'this is text'; 
+    const myRooms = document.getElementById('myRooms'); 
+    const about = document.getElementById('about'); 
+    const searchRooms = document.getElementById('searchRooms'); 
 
-    const changeText = function () {
-        const element = document.querySelector('h1'); 
-        element.textContent = text; 
-    }
+    const myRoomsBtn = document.getElementById('myRoomsBtn'); 
+    const searchRoomsBtn = document.getElementById('searchRoomsBtn');
+    const aboutBtn = document.getElementById('aboutBtn')
+    
 
-    const setMainSection = function (element) {
-        console.log(element);
-        // get Main Section elements a variables
-        // set all section.class d-none
-        // use element.id to run a switch case against each to fine the one turn on d-none
-        switch (element.id) {
-            case 'about':
-            // Remove d-none class
+    const setMainSection = function (id) {
+        const ui = [myRooms,searchRooms, about]; 
+        const mainBtns = [myRoomsBtn, searchRoomsBtn, aboutBtn]
+
+        ui.forEach((element)=>{
+            element.classList.add('d-none');
+        })
+
+        mainBtns.forEach((element)=>{
+            element.classList.remove('active');
+
+        })
+
+        switch (id) {
+            case 'myRoomsBtn':
+                ui[0].classList.remove('d-none');
+                mainBtns[0].classList.add('active')
+                console.log(ui[0]);
                 break;
 
-            case 'myRooms':
-            // Remove d-none class
+            case 'searchRoomsBtn':
+                ui[1].classList.remove('d-none');
+                mainBtns[1].classList.add('active');
                 break;
 
-            case 'searchRooms':
-            // Remove d-none class
+            case 'aboutBtn':
+                ui[2].classList.remove('d-none');
+                mainBtns[2].classList.add('active');
                 break;
         
             default:
                 break;
         }
+
+        // use element.id to run a switch case against each to fine the one turn on d-none
+
         // Loops through sections array
         // Find element that matches
         // set elememt.class to active
-        
     }
 
     return {
         callChangeText: function () {
             changeText(); 
         },
-        displayInConsole: function (data) {
-            console.log(data);
-        }
+        callSetMainSection: function (id) {
+            setMainSection(id); 
+        },
     }
 })();

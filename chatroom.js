@@ -13,6 +13,13 @@ export class Chatroom {
     register(user){
         this.users.push(user);
         user.chatroom = this;
-    }; 
+    };
+
+    unregister(user){
+        // loop through array of users to match user.name with users.user.name
+        // Get index of matching user
+        // Call splice method to remove user 
+        // Assign returned array to value of users
+    }
 
 }
