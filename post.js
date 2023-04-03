@@ -1,0 +1,1 @@
+// this is contructor for a post which are then added to chatrooms and users 

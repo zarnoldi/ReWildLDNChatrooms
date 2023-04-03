@@ -39,7 +39,7 @@
                     <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
                         <ul class="nav nav-pills flex-column mb-auto" id="mainNav">
                           <li class="nav-item">
-                            <a href="#" class="nav-link text-white active" id="myRoomsBtn" aria-current="page">
+                            <a href="#" class="nav-link text-white" id="myRoomsBtn" aria-current="page">
                               My Rooms
                             </a>
                           </li>
@@ -49,14 +49,24 @@
                             </a>
                           </li>
                           <li>
+                            <a href="#" class="nav-link text-white" id="newChatroomBtn">
+                              Add new Chatroom
+                            </a>
+                          </li>
+                          <li>
                             <a href="#" class="nav-link text-white" id="aboutBtn">
                               About
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="nav-link text-white" id="newUserBtn">
+                              Add new User
                             </a>
                           </li>
                         </ul>
                       </div>
                 <div class="col bg-dark">
-                    <section id="myRooms" class="">
+                    <section id="myRooms" class="d-none">
                         <div class="container">
                             <h2 class="text-white">My Rooms</h2>
                             <table class="table text-white">
@@ -83,7 +93,7 @@
                             </table>
                         </div>
                     </section>
-                    <section id="about" class="">
+                    <section id="about" class="d-none">
                         <div class="container text-white">
                             <h2>About the Rewild London</h2>
                             <p>
@@ -99,7 +109,7 @@
                             </p>
                         </div>
                     </section>
-                    <section id="searchRooms" class="">
+                    <section id="searchRooms" class="d-none">
                         <div class="container">
                             <div class="row mt-4">
                                 <div class="col-md-auto">
@@ -133,6 +143,52 @@
                                 </table>
                               </div>
                           </div>
+                        </div>
+                    </section>
+                    <section id="newChatroom" class="d-none">
+                        <div class="container text-white">
+                            <div class="d-flex justify-content-center">
+                                <form class="col-md-6 text-white">
+                                    <h2>New Chatroom</h2>
+                                    <div class="form-group">
+                                        <label for="name">Chatroom name</label>
+                                        <input type="text" class="form-control" id="nameChatroom" placeholder="Name of Chatroom">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="d-block" for="name">Owner</label>
+                                        <select class="custom-select">
+                                            <option>User1</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Description</label>
+                                        <textarea class="form-control" id="descriptionChatroom" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary mt-2">Add Chatroom</button>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="newUser" class="d-none text-white">
+                        <div class="container">
+                            <div class="d-flex justify-content-center">
+                                <form class="col-md-6 text-white">
+                                    <h2>New User</h2>
+                                    <div class="form-group">
+                                        <label for="nameUser">Name</label>
+                                        <input type="text" class="form-control" id="nameUser" placeholder="Users name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="passwordUser">Password</label>
+                                        <input type="password" class="form-control" id="passwordUser" placeholder="New Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailUser">Email</label>
+                                        <input type="email" class="form-control" id="emailUser" placeholder="User's email">
+                                    </div>
+                                    <button id="addUserBtn" type="submit" class="btn btn-primary mt-2">Add User</button>
+                                </form>
+                            </div>
                         </div>
                     </section>
                 </div>

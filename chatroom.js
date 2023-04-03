@@ -2,9 +2,10 @@
 
 export class Chatroom {
 
-    constructor(name, owner, date){
+    constructor(name, owner, date, description){
         this.name = name;
         this.owner = owner;
+        this.description = description;
         this.users = [];
         this.posts = [];
         this.dateCreated = date; 

@@ -1,22 +1,36 @@
 import { Chatroom } from "./chatroom.js";
 import { UICtrl } from "./ui.js";
+import { User } from "./user.js";
 
 
-const chatroom1 = new Chatroom('chatroom1', 'Tom A', '30/03/2023'); 
-
-console.log(chatroom1);
 // Get UI varaibles 
-const myRoomsBtn = document.getElementById('myRoomsBtn'); 
 const mainNav = document.getElementById('mainNav');
+const addUserBtn = document.getElementById('addUserBtn'); 
+const nameUser = document.getElementById('nameUser');
+const passwordUser = document.getElementById('passwordUser'); 
+const emailUser = document.getElementById('emailUser'); 
 
 
 // Intialise event listeners 
 
+// UI Events
 mainNav.addEventListener('click', (e)=>{
     UICtrl.callSetMainSection(e.target.id);
-    console.log(e.target.id);
 }); 
 
+// Form events 
+addUserBtn.addEventListener('click', (e)=>{
+    console.log(e);
+    console.log(nameUser.value);
+    console.log(passwordUser.value);
+    console.log(emailUser.value);
+
+   let user = new User(nameUser.value, passwordUser.value, emailUser.value);
+   const userJSON = JSON.stringify(user); 
+   console.log(userJSON);
+   UICtrl.callnewUserMessage(nameUser.value); 
+
+});
 
 // EL Search
 // Take in Parameters 

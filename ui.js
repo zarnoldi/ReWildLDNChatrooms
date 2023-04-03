@@ -11,16 +11,20 @@ export const UICtrl = (function () {
 
     const myRooms = document.getElementById('myRooms'); 
     const about = document.getElementById('about'); 
-    const searchRooms = document.getElementById('searchRooms'); 
-
+    const searchRooms = document.getElementById('searchRooms');
+    const newChatroom = document.getElementById('newChatroom');
+    const newUser = document.getElementById('newUser');
+    
     const myRoomsBtn = document.getElementById('myRoomsBtn'); 
     const searchRoomsBtn = document.getElementById('searchRoomsBtn');
     const aboutBtn = document.getElementById('aboutBtn')
+    const newChatroomBtn = document.getElementById('newChatroomBtn'); 
+    const newUserBtn = document.getElementById('newUserBtn'); 
     
 
     const setMainSection = function (id) {
-        const ui = [myRooms,searchRooms, about]; 
-        const mainBtns = [myRoomsBtn, searchRoomsBtn, aboutBtn]
+        const ui = [myRooms, searchRooms, newChatroom, about, newUser]; 
+        const mainBtns = [myRoomsBtn, searchRoomsBtn, newChatroomBtn,  aboutBtn, newUserBtn];
 
         ui.forEach((element)=>{
             element.classList.add('d-none');
@@ -32,36 +36,50 @@ export const UICtrl = (function () {
         })
 
         switch (id) {
-            case 'myRoomsBtn':
+            case myRoomsBtn.id:
                 ui[0].classList.remove('d-none');
-                mainBtns[0].classList.add('active')
+                mainBtns[0].classList.add('active');
                 console.log(ui[0]);
                 break;
 
-            case 'searchRoomsBtn':
+            case searchRoomsBtn.id:
                 ui[1].classList.remove('d-none');
                 mainBtns[1].classList.add('active');
                 break;
 
-            case 'aboutBtn':
+            case newChatroomBtn.id:
                 ui[2].classList.remove('d-none');
                 mainBtns[2].classList.add('active');
                 break;
+
+            case aboutBtn.id:
+                ui[3].classList.remove('d-none');
+                mainBtns[3].classList.add('active');
+                break;
+
+                case newUserBtn.id:
+                    ui[4].classList.remove('d-none');
+                    mainBtns[4].classList.add('active');
+                    break;
+
         
             default:
                 break;
         }
+    }
 
-        // use element.id to run a switch case against each to fine the one turn on d-none
+    const newUserMessage = function (userName) {
 
-        // Loops through sections array
-        // Find element that matches
-        // set elememt.class to active
+       const message = `<div class="alert alert-success">
+       User ${userName} has been successfully created
+       </div>`
+       newUser.children[0].insertAdjacentHTML('afterbegin', message); 
+       
     }
 
     return {
-        callChangeText: function () {
-            changeText(); 
+        callnewUserMessage: function (userName) {
+            newUserMessage(userName); 
         },
         callSetMainSection: function (id) {
             setMainSection(id); 
